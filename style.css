@@ -5,7 +5,7 @@
   color-scheme: light;
   --surface: #fff;
   --ink: #0b2f45;
-  --mute: #5d7183;
+  --mute: #273745;
   --line: #e3eaef;
   --aqua: #35e6fc;
   --aquaD: #0098c9;
@@ -14,10 +14,11 @@
   --deep: #0d3550;
   --deeper: #001f3b;
   --panel: #f3f7f8;
-  --avocado: #b3b503;
+  --avocado: #b3b503; /* #949600 */
+  --avocadoD: #6e7000;
   --purple: #934fd1;
   --blue: #5240ff;
-  --coral: #f07a57;
+  --coral: #f07a57; /* #d8471b */
   --glow-shadow: 0 0 0 -15px #00b1d200;
   --glow-shadow-hover: 0 16px 34px -15px #00b1d266;
   --g-panel: linear-gradient(135deg, var(--panel), var(--line));
@@ -63,10 +64,10 @@ h3 {
   letter-spacing: -0.02em;
 }
 .eyebrow {
-  font: 700 0.78rem Figtree;
+  font: 700 1rem Figtree;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--avocado);
+  color: var(--teal);
   margin: 0 0 10px;
 }
 :focus-visible {
@@ -318,6 +319,7 @@ nav > a:hover,
 }
 .hero .eyebrow {
   color: var(--aquaD);
+  font-size: 1.36rem;
 }
 .qcard {
   width: 250px;
@@ -391,16 +393,15 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  align-items: end;
   margin-bottom: 40px;
 }
 .hd2 h2 {
   font-size: clamp(1.9rem, 3.4vw, 2.5rem);
 }
 .hd2 p {
-  color: var(--mute);
+  /* color: var(--mute); */
   max-width: 38ch;
-  margin: 0;
+  margin-top: 0;
 }
 .path {
   display: grid;
@@ -530,7 +531,7 @@ section {
   margin: 0 0 14px;
 }
 .feat p {
-  color: var(--mute);
+  /* color: var(--mute); */
   max-width: 42ch;
   margin: 0 0 26px;
 }
@@ -614,7 +615,7 @@ section {
   margin: 0 0 14px;
 }
 .cta p {
-  color: var(--mute);
+  /* color: var(--mute); */
   max-width: 40ch;
   margin: 0 0 26px;
 }
@@ -627,11 +628,6 @@ section {
 .ql h2 {
   font-size: clamp(1.8rem, 3vw, 2.3rem);
   margin: 0 0 12px;
-}
-.ql > .w > div:first-child p {
-  color: var(--mute);
-  max-width: 34ch;
-  margin: 0;
 }
 .qllist a {
   display: flex;
@@ -1498,7 +1494,9 @@ html:has(.ptabs[data-hash]) {
 .glance dt {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--mute);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--tealD);
 }
 .glance dd {
   margin: 4px 0 0;
