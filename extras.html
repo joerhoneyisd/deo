@@ -8,6 +8,8 @@
     />
     <meta name="color-scheme" content="light" />
     <title>Design System | Department of Economic Opportunity</title>
+    <link rel="icon" href="assets/la-county-seal.svg" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/la-county-seal.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -70,6 +72,32 @@
         border-radius: 999px;
         padding: 4px 12px;
         margin-bottom: 10px;
+      }
+      .doc-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+      .doc-table th,
+      .doc-table td {
+        text-align: left;
+        padding: 10px 14px;
+        border-top: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .doc-table thead th {
+        border-top: 0;
+        background: var(--panel);
+        font-weight: 600;
+      }
+      .doc-frame .ptabs {
+        position: static;
+      }
+      .doc-frame .glance {
+        border-bottom: 0;
+      }
+      .doc-frame .pill {
+        margin: 0 8px 0 0;
       }
     </style>
   </head>
@@ -507,6 +535,881 @@
           </div>
         </div>
       </div>
+      <div class="doc-component" id="section-system">
+        <div class="meta">
+          <span class="doc-tag">System</span>
+          <h2>Program page section system</h2>
+          <p>
+            Every program or detail page is assembled from the same frame and a
+            shared catalog of section types. Pick sections by what the program
+            has, not by a fixed template.
+          </p>
+        </div>
+        <div class="doc-frame" style="padding: 28px 24px">
+          <ul class="checks">
+            <li>
+              <b>Page types.</b> Single program (what it is, who qualifies, how
+              to apply, results) and sector initiative (overview, reports,
+              results; no eligibility or application). The umbrella hub is
+              designed separately.
+            </li>
+            <li>
+              <b>Tab vocabulary (fixed).</b> Overview, Eligibility, How to
+              Apply, Results, FAQs &amp; Resources. No other labels.
+            </li>
+            <li>
+              <b>Tab rules.</b> A tab appears only if it has content. Overview
+              is always first. A page with fewer than two non-empty tabs has no
+              tab bar and shows its sections in one scroll.
+            </li>
+            <li>
+              <b>Deep links.</b> Each panel id is the tab’s anchor:
+              <code>#overview</code>, <code>#eligibility</code>,
+              <code>#how-to-apply</code>, <code>#results</code>,
+              <code>#faqs-resources</code>. Any id inside a panel (such as
+              <code>#faq</code>) opens its tab too.
+            </li>
+            <li>
+              <b>Outside the tabs.</b> Hero, glance bar, CTA, Downloads,
+              Contact, Related programs.
+            </li>
+          </ul>
+        </div>
+        <div class="doc-frame" style="margin-top: 16px; overflow-x: auto">
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Section type</th>
+                <th>Lives in</th>
+                <th>Component</th>
+                <th>Page type</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hero, At-a-glance bar</td>
+                <td>Frame</td>
+                <td>Hero, Glance bar</td>
+                <td>Both</td>
+                <td>
+                  Always present. Glance holds Who it’s for, Where, Get help,
+                  Downloads (add Status when confirmed).
+                </td>
+              </tr>
+              <tr>
+                <td>Program Overview</td>
+                <td>Overview</td>
+                <td>Split + prose</td>
+                <td>Both</td>
+                <td>Always the first tab.</td>
+              </tr>
+              <tr>
+                <td>Key Benefits / Services</td>
+                <td>Overview</td>
+                <td>Benefit cards (.bcard in .path.cols3)</td>
+                <td>Both</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Assistance &amp; Support</td>
+                <td>Overview</td>
+                <td>Benefit cards + .actions</td>
+                <td>Program</td>
+                <td>Same cards; end each with a way to get help.</td>
+              </tr>
+              <tr>
+                <td>Workshops &amp; Events</td>
+                <td>Overview</td>
+                <td>Events list</td>
+                <td>Both</td>
+                <td>Only list dated items; remove past ones.</td>
+              </tr>
+              <tr>
+                <td>Eligibility Criteria</td>
+                <td>Eligibility</td>
+                <td>Eligibility cards</td>
+                <td>Program</td>
+                <td>Omit for sector initiatives.</td>
+              </tr>
+              <tr>
+                <td>Requirements &amp; Exclusions</td>
+                <td>Eligibility</td>
+                <td>Eligibility cards with .checks.no</td>
+                <td>Program</td>
+                <td>Second card lists who or what does not qualify.</td>
+              </tr>
+              <tr>
+                <td>Rules &amp; Obligations</td>
+                <td>Eligibility</td>
+                <td>Rules list</td>
+                <td>Program</td>
+                <td>Terms after approval: reporting, hours, permits.</td>
+              </tr>
+              <tr>
+                <td>Geography / Priority Areas</td>
+                <td>Eligibility (program) or Overview (sector)</td>
+                <td>Area chips</td>
+                <td>Both</td>
+                <td>Mark priority areas with .pri.</td>
+              </tr>
+              <tr>
+                <td>How to Apply</td>
+                <td>How to Apply</td>
+                <td>Numbered steps (inside pill tabs for 2+ audiences)</td>
+                <td>Program</td>
+                <td>Omit for sector initiatives.</td>
+              </tr>
+              <tr>
+                <td>Status &amp; Key Dates</td>
+                <td>How to Apply + glance bar</td>
+                <td>Status pill + Rules list</td>
+                <td>Program</td>
+                <td>
+                  Pending client answer; build only if programs have deadlines.
+                </td>
+              </tr>
+              <tr>
+                <td>Detail drawer</td>
+                <td>Any tab</td>
+                <td>Drawer</td>
+                <td>Both</td>
+                <td>Long fine print that most people skip.</td>
+              </tr>
+              <tr>
+                <td>Results &amp; Impact</td>
+                <td>Results</td>
+                <td>Stat band</td>
+                <td>Both</td>
+                <td>Tab appears only if the program has results content.</td>
+              </tr>
+              <tr>
+                <td>Reports &amp; Policy Background</td>
+                <td>Results</td>
+                <td>Downloads list</td>
+                <td>Sector</td>
+                <td>Lead section for sector initiatives.</td>
+              </tr>
+              <tr>
+                <td>Gallery</td>
+                <td>Results</td>
+                <td>Gallery + lightbox</td>
+                <td>Both</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>FAQ</td>
+                <td>FAQs &amp; Resources</td>
+                <td>FAQ list</td>
+                <td>Both</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Additional Resources, Partners &amp; Funding</td>
+                <td>FAQs &amp; Resources</td>
+                <td>Quick links, logo row</td>
+                <td>Both</td>
+                <td>
+                  Partners &amp; Funding is inferred; confirm with client.
+                </td>
+              </tr>
+              <tr>
+                <td>Call-to-Action</td>
+                <td>Outside tabs</td>
+                <td>CTA band</td>
+                <td>Both</td>
+                <td>Sector pages point to a report or the contact section.</td>
+              </tr>
+              <tr>
+                <td>Downloads</td>
+                <td>Outside tabs</td>
+                <td>Downloads list</td>
+                <td>Both</td>
+                <td>Linked from the glance bar.</td>
+              </tr>
+              <tr>
+                <td>Contact &amp; Locations</td>
+                <td>Outside tabs</td>
+                <td>Contact cards in a dark section</td>
+                <td>Both</td>
+                <td>
+                  Always present. The standard dark section below the tabs.
+                </td>
+              </tr>
+              <tr>
+                <td>Related Programs</td>
+                <td>Outside tabs</td>
+                <td>Program cards (.pcard)</td>
+                <td>Both</td>
+                <td>Always present.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="doc-component" id="page-tabs">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Page tab bar</h2>
+          <p>
+            The page-level variant of tabs. Sticky below the main nav, full
+            width, larger type, and a thick underline on the active tab. On
+            narrow screens it scrolls sideways with a fade at the edges. Panels
+            are siblings of the bar. Add <code>data-hash</code> on real pages
+            for deep links (the panel id is the hash). In this demo the bar is
+            not sticky and does not touch the URL.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div class="ptabs" data-ptabs>
+            <div class="w">
+              <div
+                class="ptabs-scroll"
+                role="tablist"
+                aria-label="Demo sections"
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  id="ptab-d1"
+                  aria-selected="true"
+                  aria-controls="d1"
+                >
+                  Overview
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  id="ptab-d2"
+                  aria-selected="false"
+                  aria-controls="d2"
+                  tabindex="-1"
+                >
+                  Eligibility
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  id="ptab-d3"
+                  aria-selected="false"
+                  aria-controls="d3"
+                  tabindex="-1"
+                >
+                  How to Apply
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  id="ptab-d4"
+                  aria-selected="false"
+                  aria-controls="d4"
+                  tabindex="-1"
+                >
+                  Results
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  id="ptab-d5"
+                  aria-selected="false"
+                  aria-controls="d5"
+                  tabindex="-1"
+                >
+                  FAQs &amp; Resources
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ppanel"
+            role="tabpanel"
+            id="d1"
+            aria-labelledby="ptab-d1"
+            tabindex="0"
+          >
+            <section>
+              <div class="w"><h2>Overview panel</h2></div>
+            </section>
+          </div>
+          <div
+            class="ppanel"
+            role="tabpanel"
+            id="d2"
+            aria-labelledby="ptab-d2"
+            tabindex="0"
+            hidden
+          >
+            <section>
+              <div class="w"><h2>Eligibility panel</h2></div>
+            </section>
+          </div>
+          <div
+            class="ppanel"
+            role="tabpanel"
+            id="d3"
+            aria-labelledby="ptab-d3"
+            tabindex="0"
+            hidden
+          >
+            <section>
+              <div class="w"><h2>How to Apply panel</h2></div>
+            </section>
+          </div>
+          <div
+            class="ppanel"
+            role="tabpanel"
+            id="d4"
+            aria-labelledby="ptab-d4"
+            tabindex="0"
+            hidden
+          >
+            <section>
+              <div class="w"><h2>Results panel</h2></div>
+            </section>
+          </div>
+          <div
+            class="ppanel"
+            role="tabpanel"
+            id="d5"
+            aria-labelledby="ptab-d5"
+            tabindex="0"
+            hidden
+          >
+            <section>
+              <div class="w"><h2>FAQs &amp; Resources panel</h2></div>
+            </section>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;div class=&quot;ptabs&quot; data-ptabs&gt;&lt;div
+          class=&quot;w&quot;&gt;&lt;div class=&quot;ptabs-scroll&quot;
+          role=&quot;tablist&quot; aria-label=&quot;Demo sections&quot;&gt;
+          &lt;button type=&quot;button&quot; role=&quot;tab&quot;
+          id=&quot;ptab-d1&quot; aria-selected=&quot;true&quot;
+          aria-controls=&quot;d1&quot;&gt;Overview&lt;/button&gt; &lt;button
+          type=&quot;button&quot; role=&quot;tab&quot; id=&quot;ptab-d2&quot;
+          aria-selected=&quot;false&quot; aria-controls=&quot;d2&quot;
+          tabindex=&quot;-1&quot;&gt;Eligibility&lt;/button&gt; &lt;button
+          type=&quot;button&quot; role=&quot;tab&quot; id=&quot;ptab-d3&quot;
+          aria-selected=&quot;false&quot; aria-controls=&quot;d3&quot;
+          tabindex=&quot;-1&quot;&gt;How to Apply&lt;/button&gt; &lt;button
+          type=&quot;button&quot; role=&quot;tab&quot; id=&quot;ptab-d4&quot;
+          aria-selected=&quot;false&quot; aria-controls=&quot;d4&quot;
+          tabindex=&quot;-1&quot;&gt;Results&lt;/button&gt; &lt;button
+          type=&quot;button&quot; role=&quot;tab&quot; id=&quot;ptab-d5&quot;
+          aria-selected=&quot;false&quot; aria-controls=&quot;d5&quot;
+          tabindex=&quot;-1&quot;&gt;FAQs &amp;amp; Resources&lt;/button&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;div class=&quot;ppanel&quot;
+          role=&quot;tabpanel&quot; id=&quot;d1&quot;
+          aria-labelledby=&quot;ptab-d1&quot;
+          tabindex=&quot;0&quot;&gt;&lt;section&gt;&lt;div
+          class=&quot;w&quot;&gt;&lt;h2&gt;Overview
+          panel&lt;/h2&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt; &lt;div
+          class=&quot;ppanel&quot; role=&quot;tabpanel&quot; id=&quot;d2&quot;
+          aria-labelledby=&quot;ptab-d2&quot; tabindex=&quot;0&quot;
+          hidden&gt;&lt;section&gt;&lt;div
+          class=&quot;w&quot;&gt;&lt;h2&gt;Eligibility
+          panel&lt;/h2&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt; &lt;div
+          class=&quot;ppanel&quot; role=&quot;tabpanel&quot; id=&quot;d3&quot;
+          aria-labelledby=&quot;ptab-d3&quot; tabindex=&quot;0&quot;
+          hidden&gt;&lt;section&gt;&lt;div class=&quot;w&quot;&gt;&lt;h2&gt;How
+          to Apply panel&lt;/h2&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+          &lt;div class=&quot;ppanel&quot; role=&quot;tabpanel&quot;
+          id=&quot;d4&quot; aria-labelledby=&quot;ptab-d4&quot;
+          tabindex=&quot;0&quot; hidden&gt;&lt;section&gt;&lt;div
+          class=&quot;w&quot;&gt;&lt;h2&gt;Results
+          panel&lt;/h2&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt; &lt;div
+          class=&quot;ppanel&quot; role=&quot;tabpanel&quot; id=&quot;d5&quot;
+          aria-labelledby=&quot;ptab-d5&quot; tabindex=&quot;0&quot;
+          hidden&gt;&lt;section&gt;&lt;div class=&quot;w&quot;&gt;&lt;h2&gt;FAQs
+          &amp;amp; Resources
+          panel&lt;/h2&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="glance">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>At-a-glance bar</h2>
+          <p>
+            Four facts under the hero, outside the tabs: Who it’s for, Where,
+            Get help, Downloads. Use short values, link where useful, and drop
+            an item rather than leave it empty. The
+            <a href="#status">status pill</a> can become a fifth item if the
+            client confirms deadlines.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <aside class="glance" aria-label="Program at a glance">
+            <div class="w">
+              <dl>
+                <div>
+                  <dt>Who it’s for</dt>
+                  <dd>LA County youth ages 14 to 24</dd>
+                </div>
+                <div>
+                  <dt>Where</dt>
+                  <dd>Countywide, through AJCCs</dd>
+                </div>
+                <div>
+                  <dt>Get help</dt>
+                  <dd>
+                    <a href="mailto:name@opportunity.lacounty.gov"
+                      >name@opportunity.lacounty.gov</a
+                    >
+                  </dd>
+                </div>
+                <div>
+                  <dt>Downloads</dt>
+                  <dd><a href="#downloads">Forms and report (PDF)</a></dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+        </div>
+        <div class="doc-code">
+          &lt;aside class=&quot;glance&quot; aria-label=&quot;Program at a
+          glance&quot;&gt;&lt;div class=&quot;w&quot;&gt;&lt;dl&gt;
+          &lt;div&gt;&lt;dt&gt;Who it’s for&lt;/dt&gt;&lt;dd&gt;LA County youth
+          ages 14 to 24&lt;/dd&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;dt&gt;Where&lt;/dt&gt;&lt;dd&gt;Countywide, through
+          AJCCs&lt;/dd&gt;&lt;/div&gt; &lt;div&gt;&lt;dt&gt;Get
+          help&lt;/dt&gt;&lt;dd&gt;&lt;a
+          href=&quot;mailto:name@opportunity.lacounty.gov&quot;&gt;name@opportunity.lacounty.gov&lt;/a&gt;&lt;/dd&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;dt&gt;Downloads&lt;/dt&gt;&lt;dd&gt;&lt;a
+          href=&quot;#downloads&quot;&gt;Forms and report
+          (PDF)&lt;/a&gt;&lt;/dd&gt;&lt;/div&gt;
+          &lt;/dl&gt;&lt;/div&gt;&lt;/aside&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="steps">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Numbered steps</h2>
+          <p>
+            For a true sequence only (apply, hear back, enroll). Each step has a
+            bold title and one or two sentences. Put one list per audience
+            inside the pill tabs when the process differs.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <ol class="steps">
+              <li>
+                <b>Check that you’re eligible</b
+                ><span>Short explanation of the first step.</span>
+              </li>
+              <li>
+                <b>Submit the form</b
+                ><span>What to expect after you submit.</span>
+              </li>
+              <li><b>Start the program</b><span>What happens next.</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;ol class=&quot;steps&quot;&gt; &lt;li&gt;&lt;b&gt;Check that
+          you’re eligible&lt;/b&gt;&lt;span&gt;Short explanation of the first
+          step.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;b&gt;Submit the
+          form&lt;/b&gt;&lt;span&gt;What to expect after you
+          submit.&lt;/span&gt;&lt;/li&gt; &lt;li&gt;&lt;b&gt;Start the
+          program&lt;/b&gt;&lt;span&gt;What happens
+          next.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="faq">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>FAQ</h2>
+          <p>
+            Native <code>details</code>/<code>summary</code>, so it works
+            without JavaScript. Write questions the way people ask them; keep
+            answers to a short paragraph.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <div class="faq">
+              <details>
+                <summary>Is the program free?</summary>
+                <div class="a"><p>Yes. There is no cost to apply.</p></div>
+              </details>
+              <details>
+                <summary>How long does it take?</summary>
+                <div class="a"><p>Answer text goes here.</p></div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;div class=&quot;faq&quot;&gt; &lt;details&gt;&lt;summary&gt;Is the
+          program free?&lt;/summary&gt;&lt;div
+          class=&quot;a&quot;&gt;&lt;p&gt;Yes. There is no cost to
+          apply.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+          &lt;details&gt;&lt;summary&gt;How long does it
+          take?&lt;/summary&gt;&lt;div class=&quot;a&quot;&gt;&lt;p&gt;Answer
+          text goes here.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="eligibility">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Eligibility and exclusions cards</h2>
+          <p>
+            Two cards side by side (stacked below 800px). Use check dots for
+            what qualifies. For Requirements &amp; Exclusions, make the second
+            card <code>.checks.no</code>: a coral dash instead of a dot, so the
+            difference is not color alone. <code>.note</code> adds a gray aside
+            under a list.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <div class="elig">
+              <article class="bcard">
+                <h3>Who qualifies</h3>
+                <ul class="checks">
+                  <li>Located in LA County</li>
+                  <li>Active business license</li>
+                </ul>
+                <p class="note">Optional aside under the list.</p>
+              </article>
+              <article class="bcard">
+                <h3>Who doesn’t</h3>
+                <ul class="checks no">
+                  <li>Properties outside the target areas</li>
+                  <li>Projects already under construction</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;div class=&quot;elig&quot;&gt; &lt;article
+          class=&quot;bcard&quot;&gt;&lt;h3&gt;Who qualifies&lt;/h3&gt;&lt;ul
+          class=&quot;checks&quot;&gt;&lt;li&gt;Located in LA
+          County&lt;/li&gt;&lt;li&gt;Active business
+          license&lt;/li&gt;&lt;/ul&gt; &lt;p class=&quot;note&quot;&gt;Optional
+          aside under the list.&lt;/p&gt;&lt;/article&gt; &lt;article
+          class=&quot;bcard&quot;&gt;&lt;h3&gt;Who doesn’t&lt;/h3&gt;&lt;ul
+          class=&quot;checks no&quot;&gt;&lt;li&gt;Properties outside the target
+          areas&lt;/li&gt;&lt;li&gt;Projects already under
+          construction&lt;/li&gt;&lt;/ul&gt;&lt;/article&gt;&lt;/div&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="drawer">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Detail drawer</h2>
+          <p>
+            A single “Full details” accordion for fine print most visitors skip.
+            It can sit in any tab. Use FAQ instead when the content is several
+            separate questions.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <div class="drawer">
+              <details>
+                <summary>Full details</summary>
+                <div class="a">
+                  <p>Long-form terms, definitions, or legal language.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;div class=&quot;drawer&quot;&gt;&lt;details&gt;&lt;summary&gt;Full
+          details&lt;/summary&gt;&lt;div
+          class=&quot;a&quot;&gt;&lt;p&gt;Long-form terms, definitions, or legal
+          language.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="rules">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Rules and obligations</h2>
+          <p>
+            Term-and-definition rows for conditions that apply after approval.
+            Also works for Key Dates (term = milestone, definition = date).
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <dl class="rules">
+              <div>
+                <dt>Reporting</dt>
+                <dd>Submit a progress report every quarter.</dd>
+              </div>
+              <div>
+                <dt>Permits</dt>
+                <dd>Keep your permit visible while operating.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;dl class=&quot;rules&quot;&gt;
+          &lt;div&gt;&lt;dt&gt;Reporting&lt;/dt&gt;&lt;dd&gt;Submit a progress
+          report every quarter.&lt;/dd&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;dt&gt;Permits&lt;/dt&gt;&lt;dd&gt;Keep your permit
+          visible while operating.&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="chips">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Area chips</h2>
+          <p>
+            Neighborhoods, cities, or districts a program serves. Add
+            <code>.pri</code> to priority areas; they get a dot and a teal
+            outline.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <ul class="chips">
+              <li class="pri">East Los Angeles</li>
+              <li class="pri">South Los Angeles</li>
+              <li>Pomona</li>
+              <li>Lancaster</li>
+            </ul>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;ul class=&quot;chips&quot;&gt;&lt;li class=&quot;pri&quot;&gt;East
+          Los Angeles&lt;/li&gt;&lt;li class=&quot;pri&quot;&gt;South Los
+          Angeles&lt;/li&gt;&lt;li&gt;Pomona&lt;/li&gt;&lt;li&gt;Lancaster&lt;/li&gt;&lt;/ul&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="events">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Workshops and events</h2>
+          <p>
+            One row per dated item. Use a real <code>datetime</code>. The button
+            is optional.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <ul class="events">
+              <li>
+                <time datetime="2026-11-12"><b>12</b>Nov</time>
+                <div>
+                  <h3>Applicant workshop</h3>
+                  <p>10:00 a.m., online</p>
+                </div>
+                <a class="btn ghost" href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;ul class=&quot;events&quot;&gt;&lt;li&gt;&lt;time
+          datetime=&quot;2026-11-12&quot;&gt;&lt;b&gt;12&lt;/b&gt;Nov&lt;/time&gt;&lt;div&gt;&lt;h3&gt;Applicant
+          workshop&lt;/h3&gt;&lt;p&gt;10:00 a.m.,
+          online&lt;/p&gt;&lt;/div&gt;&lt;a class=&quot;btn ghost&quot;
+          href=&quot;#&quot;&gt;Register&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="downloads">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Downloads and reports list</h2>
+          <p>
+            Forms, PDFs, and reports. The tag names the type, the small line
+            gives context and date. Used for the Downloads section (outside the
+            tabs) and for Reports &amp; Policy Background.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <ul class="doclist">
+              <li>
+                <a href="#"
+                  ><span class="ft">PDF</span
+                  ><span class="t"
+                    >Program guidelines<small>Report · August 2026</small></span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="ft">Form</span
+                  ><span class="t"
+                    >Application form<small>Fillable PDF</small></span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;ul class=&quot;doclist&quot;&gt;&lt;li&gt;&lt;a
+          href=&quot;#&quot;&gt;&lt;span
+          class=&quot;ft&quot;&gt;PDF&lt;/span&gt;&lt;span
+          class=&quot;t&quot;&gt;Program guidelines&lt;small&gt;Report · August
+          2026&lt;/small&gt;&lt;/span&gt;&lt;svg …/&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span
+          class=&quot;ft&quot;&gt;Form&lt;/span&gt;&lt;span
+          class=&quot;t&quot;&gt;Application form&lt;small&gt;Fillable
+          PDF&lt;/small&gt;&lt;/span&gt;&lt;svg
+          …/&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="contact">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Contact and locations</h2>
+          <p>
+            One card per audience or office. Add address, hours, and phone as
+            short <code>p</code> lines when the client provides them. Cards
+            reflow to fit the width.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <div class="contact">
+              <article class="bcard">
+                <h3>Main office</h3>
+                <p>Street address</p>
+                <p>Mon to Fri, 8 a.m. to 5 p.m.</p>
+                <p><a href="tel:+13235550100">(323) 555-0100</a></p>
+              </article>
+              <article class="bcard">
+                <h3>Email us</h3>
+                <p>
+                  <a href="mailto:name@opportunity.lacounty.gov"
+                    >name@opportunity.lacounty.gov</a
+                  >
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;div class=&quot;contact&quot;&gt;&lt;article
+          class=&quot;bcard&quot;&gt;&lt;h3&gt;Main
+          office&lt;/h3&gt;&lt;p&gt;Street address&lt;/p&gt;&lt;p&gt;Mon to Fri,
+          8 a.m. to 5 p.m.&lt;/p&gt;&lt;p&gt;&lt;a
+          href=&quot;tel:+13235550100&quot;&gt;(323)
+          555-0100&lt;/a&gt;&lt;/p&gt;&lt;/article&gt; &lt;article
+          class=&quot;bcard&quot;&gt;&lt;h3&gt;Email us&lt;/h3&gt;&lt;p&gt;&lt;a
+          href=&quot;mailto:name@opportunity.lacounty.gov&quot;&gt;name@opportunity.lacounty.gov&lt;/a&gt;&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="dark">
+        <div class="meta">
+          <span class="doc-tag">Component</span>
+          <h2>Dark section</h2>
+          <p>
+            Adds contrast between light sections, using the same treatment as
+            the Home news section: gradient background, white type, light-blue
+            secondary text, and hairline dividers. <code>.dark</code> uses the
+            news gradient; <code>.dark.alt</code> mirrors it (as in the stat
+            band) so two dark sections on a page do not look identical.
+            Supported inside it: rules, events, downloads list, area chips, FAQ,
+            contact cards, logo row, notes, and buttons (primary turns white).
+            Guidelines: at most one dark section per tab panel, never two
+            touching, and Contact is the standard dark section below the tabs.
+            The footer is also dark, so keep Related programs (light) between
+            them.
+          </p>
+        </div>
+        <div class="doc-frame">
+          <section class="dark">
+            <div class="w">
+              <div class="hd2">
+                <div>
+                  <p class="eyebrow">Eyebrow</p>
+                  <h2>Dark section title</h2>
+                </div>
+                <p>Supporting line in light blue.</p>
+              </div>
+              <dl class="rules">
+                <div>
+                  <dt>Term</dt>
+                  <dd>Definition text.</dd>
+                </div>
+                <div>
+                  <dt>Another term</dt>
+                  <dd>More definition text.</dd>
+                </div>
+              </dl>
+              <p style="margin-top: 28px">
+                <a class="btn" href="#">Primary</a>
+                <a class="btn ghost" href="#">Ghost</a>
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="doc-code">
+          &lt;section class=&quot;dark&quot;&gt;&lt;div
+          class=&quot;w&quot;&gt;&lt;div
+          class=&quot;hd2&quot;&gt;&lt;div&gt;&lt;p
+          class=&quot;eyebrow&quot;&gt;Eyebrow&lt;/p&gt;&lt;h2&gt;Dark section
+          title&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;Supporting line in light
+          blue.&lt;/p&gt;&lt;/div&gt; &lt;dl
+          class=&quot;rules&quot;&gt;&lt;div&gt;&lt;dt&gt;Term&lt;/dt&gt;&lt;dd&gt;Definition
+          text.&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Another
+          term&lt;/dt&gt;&lt;dd&gt;More definition
+          text.&lt;/dd&gt;&lt;/div&gt;&lt;/dl&gt; &lt;p
+          style=&quot;margin-top:28px&quot;&gt;&lt;a class=&quot;btn&quot;
+          href=&quot;#&quot;&gt;Primary&lt;/a&gt; &lt;a class=&quot;btn
+          ghost&quot;
+          href=&quot;#&quot;&gt;Ghost&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+        </div>
+      </div>
+      <div class="doc-component" id="status">
+        <div class="meta">
+          <span class="doc-tag">Pending sign-off</span>
+          <h2>Status pill</h2>
+          <p>
+            Pending client answer: do programs have deadlines or an open/closed
+            status? The label always says the state in words. Use
+            <code>.open</code>, <code>.soon</code>, or no modifier (closed).
+          </p>
+        </div>
+        <div class="doc-frame">
+          <div style="padding: 40px 24px">
+            <p class="pill open">Open</p>
+            <p class="pill soon">Closing soon</p>
+            <p class="pill">Closed</p>
+          </div>
+        </div>
+        <div class="doc-code">
+          &lt;p class=&quot;pill open&quot;&gt;Open&lt;/p&gt; &lt;p
+          class=&quot;pill soon&quot;&gt;Closing soon&lt;/p&gt; &lt;p
+          class=&quot;pill&quot;&gt;Closed&lt;/p&gt;
+        </div>
+      </div>
     </main>
 
     <footer id="contact">
@@ -656,6 +1559,72 @@
           if (e.key === "ArrowRight") open(i + 1);
         });
       }
+    </script>
+    <script>
+      // Page-level tabs: [data-ptabs]. Panels are hardcoded; script toggles [hidden].
+      // With data-hash, #eligibility (or any id inside a panel) opens that tab on load and on hashchange.
+      document.querySelectorAll("[data-ptabs]").forEach((w) => {
+        const sc = w.querySelector(".ptabs-scroll");
+        const tabs = [...w.querySelectorAll('[role="tab"]')];
+        const panels = tabs.map((t) =>
+          document.getElementById(t.getAttribute("aria-controls")),
+        );
+        const fade = () => {
+          const max = sc.scrollWidth - sc.clientWidth;
+          sc.style.setProperty("--fl", sc.scrollLeft > 4 ? "32px" : "0px");
+          sc.style.setProperty(
+            "--fr",
+            max - sc.scrollLeft > 4 ? "40px" : "0px",
+          );
+        };
+        const show = (i, focus) => {
+          tabs.forEach((t, j) => {
+            t.setAttribute("aria-selected", i === j);
+            t.tabIndex = i === j ? 0 : -1;
+            panels[j].hidden = i !== j;
+          });
+          sc.scrollTo({ left: tabs[i].offsetLeft - 24, behavior: "smooth" });
+          if (focus) tabs[i].focus();
+        };
+        tabs.forEach((t, i) => {
+          t.addEventListener("click", () => {
+            show(i);
+            if (w.hasAttribute("data-hash"))
+              history.replaceState(null, "", "#" + panels[i].id);
+            const off =
+              parseFloat(
+                getComputedStyle(document.documentElement).scrollPaddingTop,
+              ) || 0;
+            const top = panels[i].getBoundingClientRect().top;
+            if (top < off) scrollTo({ top: scrollY + top - off });
+          });
+          t.addEventListener("keydown", (e) => {
+            const k = {
+              ArrowRight: i + 1,
+              ArrowLeft: i - 1,
+              Home: 0,
+              End: tabs.length - 1,
+            }[e.key];
+            if (k === undefined) return;
+            e.preventDefault();
+            show((k + tabs.length) % tabs.length, true);
+          });
+        });
+        sc.addEventListener("scroll", fade, { passive: true });
+        addEventListener("resize", fade);
+        fade();
+        if (w.hasAttribute("data-hash")) {
+          const fromHash = () => {
+            const el = document.getElementById(location.hash.slice(1));
+            const i = el ? panels.findIndex((p) => p.contains(el)) : -1;
+            if (i < 0) return;
+            show(i);
+            requestAnimationFrame(() => el.scrollIntoView());
+          };
+          addEventListener("hashchange", fromHash);
+          fromHash();
+        }
+      });
     </script>
   </body>
 </html>

@@ -8,6 +8,8 @@
     />
     <meta name="color-scheme" content="light" />
     <title>Youth@Work | Department of Economic Opportunity</title>
+    <link rel="icon" href="assets/la-county-seal.svg" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/la-county-seal.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -168,7 +170,10 @@
           ><a href="category.html">For Individuals</a><span>/</span>Youth@Work
         </p>
       </div>
-      <div class="hero" style="background-image: url(img-YouthExpo.webp)">
+      <div
+        class="hero"
+        style="background-image: url(assets/img-YouthExpo.webp)"
+      >
         <div class="w">
           <div class="hero-content">
             <p class="eyebrow">Students &amp; Trainees</p>
@@ -226,839 +231,1756 @@
           </div>
         </div>
       </div>
-      <section id="about">
-        <div class="w split">
-          <div>
-            <p class="eyebrow">About the Program</p>
-            <h2>Helping young people work, earn, and grow</h2>
+      <aside class="glance" aria-label="Program at a glance">
+        <div class="w">
+          <dl>
+            <div>
+              <dt>Who it’s for</dt>
+              <dd>
+                LA County youth ages 14 to 24, and employers who host them
+              </dd>
+            </div>
+            <div>
+              <dt>Where</dt>
+              <dd>
+                Countywide, through America’s Job Centers of California (AJCC)
+              </dd>
+            </div>
+            <div>
+              <dt>Get help</dt>
+              <dd>
+                <a href="mailto:hireayouth@opportunity.lacounty.gov"
+                  >hireayouth@opportunity.lacounty.gov</a
+                >
+              </dd>
+            </div>
+            <div>
+              <dt>Downloads</dt>
+              <dd><a href="#downloads">Forms and 2026 report (PDF)</a></dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+      <div class="ptabs" data-ptabs data-hash>
+        <div class="w">
+          <div
+            class="ptabs-scroll"
+            role="tablist"
+            aria-label="Program sections"
+          >
+            <button
+              type="button"
+              role="tab"
+              id="ptab-overview"
+              aria-selected="true"
+              aria-controls="overview"
+            >
+              Overview</button
+            ><button
+              type="button"
+              role="tab"
+              id="ptab-eligibility"
+              aria-selected="false"
+              aria-controls="eligibility"
+              tabindex="-1"
+            >
+              Eligibility</button
+            ><button
+              type="button"
+              role="tab"
+              id="ptab-how-to-apply"
+              aria-selected="false"
+              aria-controls="how-to-apply"
+              tabindex="-1"
+            >
+              How to Apply</button
+            ><button
+              type="button"
+              role="tab"
+              id="ptab-results"
+              aria-selected="false"
+              aria-controls="results"
+              tabindex="-1"
+            >
+              Results</button
+            ><button
+              type="button"
+              role="tab"
+              id="ptab-faqs-resources"
+              aria-selected="false"
+              aria-controls="faqs-resources"
+              tabindex="-1"
+            >
+              FAQs &amp; Resources
+            </button>
           </div>
-          <div class="prose">
-            <p>
-              Youth@Work gives LA County’s future workforce first-time, paid
-              work experiences in high-growth and high-road sectors, building
-              skills that meet the region’s talent needs now and in the future.
-            </p>
-            <p>
-              LA County youth ages 14 to 24 get personal enrichment and hands-on
-              paid work experience through America’s Job Centers of California
-              (AJCC) and local employer partners.
-            </p>
-            <a
-              class="btn"
-              href="https://opportunity.lacounty.gov/wp-content/uploads/2026/08/DEO-Y@W-Review-and-Redesign-Report-Aug-2026.pdf"
-              target="_blank"
-              rel="noopener"
-              >2026 Program Review and Redesign Report (PDF)
-              <svg
-                class="arrow"
-                width="15"
-                height="15"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
+        </div>
+      </div>
+      <div
+        class="ppanel"
+        role="tabpanel"
+        id="overview"
+        aria-labelledby="ptab-overview"
+        tabindex="0"
+      >
+        <section id="about">
+          <div class="w split">
+            <div>
+              <p class="eyebrow">Program Overview</p>
+              <h2>Helping young people work, earn, and grow</h2>
+            </div>
+            <div class="prose">
+              <p>
+                Youth@Work gives LA County’s future workforce first-time, paid
+                work experiences in high-growth and high-road sectors, building
+                skills that meet the region’s talent needs now and in the
+                future.
+              </p>
+              <p>
+                LA County youth ages 14 to 24 get personal enrichment and
+                hands-on paid work experience through America’s Job Centers of
+                California (AJCC) and local employer partners.
+              </p>
+              <a
+                class="btn"
+                href="https://opportunity.lacounty.gov/wp-content/uploads/2026/08/DEO-Y@W-Review-and-Redesign-Report-Aug-2026.pdf"
+                target="_blank"
+                rel="noopener"
+                >2026 Program Review and Redesign Report (PDF)
+                <svg
+                  class="arrow"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="tint">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Key Benefits</p>
+                <h2>What Youth@Work offers</h2>
+              </div>
+            </div>
+            <div class="path cols3">
+              <article class="bcard">
+                <span class="ico" style="background: var(--avocado)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="7" width="18" height="10" rx="2" />
+                    <circle cx="12" cy="12" r="2.4" />
+                  </svg>
+                </span>
+                <h3>Paid work experience</h3>
+                <p>
+                  160 hours of personal enrichment training and paid work
+                  experience for youth across LA County.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--purple)">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="8" width="18" height="12" rx="2" />
+                    <path d="M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
+                  </svg>
+                </span>
+                <h3>Career readiness support</h3>
+                <p>
+                  Paid training, mentorship, and hands-on experience in
+                  high-demand industries.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--blue)">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path
+                      d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9Z"
+                    />
+                  </svg>
+                </span>
+                <h3>Equity-centered opportunities</h3>
+                <p>
+                  Support for youth affected by economic and climate crises and
+                  by systemic barriers, including foster, unhoused, LGBTQ+, and
+                  justice-involved youth.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--coral)">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 20V6l8-3 8 3v14M2 20h20M9 9h2M13 9h2M9 13h2M13 13h2"
+                    />
+                  </svg>
+                </span>
+                <h3>Pathways into high-demand industries</h3>
+                <p>
+                  Training aligned with regional workforce needs in healthcare,
+                  infrastructure, technology, and creative sectors.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--aquaD)">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 21v-9M12 12c0-4 2.5-6 7-6 0 4-2.5 6-7 6ZM12 14c0-3-2-5-6-5 0 3 2 5 6 5Z"
+                    />
+                  </svg>
+                </span>
+                <h3>Leadership and professional growth</h3>
+                <p>
+                  Workshops on leadership, career planning, and peer support
+                  build confidence and lasting networks.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--deep)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="9" cy="9" r="3" />
+                    <path d="M3 19c.8-3 3-4.5 6-4.5s5.2 1.5 6 4.5" />
+                    <circle cx="17" cy="8" r="2.4" />
+                    <path d="M17 13.5c2.2 0 3.7 1.2 4.3 3.5" />
+                  </svg>
+                </span>
+                <h3>Partnerships with employers</h3>
+                <p>
+                  Employers get access to an emerging talent pipeline for up to
+                  four months of part-time work, with wage and insurance
+                  subsidies.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Assistance &amp; Support</p>
+                <h2>Help along the way</h2>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+            <div class="path cols3">
+              <article class="bcard">
+                <span class="ico" style="background: var(--aquaD)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 17h2l2-9h10l2 9h2M7 17a2 2 0 1 0 4 0M13 17a2 2 0 1 0 4 0"
+                    /></svg
+                ></span>
+                <h3>Transportation assistance</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--purple)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 8l8-4 8 4-8 4-8-4zM4 8v8l8 4 8-4V8" /></svg
+                ></span>
+                <h3>Work gear and supplies</h3>
+                <p>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--coral)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"
+                    /></svg
+                ></span>
+                <h3>One-on-one coaching</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="dark">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Workshops &amp; Events</p>
+                <h2>Upcoming workshops and events</h2>
+              </div>
+              <p>Sample dates for layout only.</p>
+            </div>
+            <ul class="events">
+              <li>
+                <time datetime="2026-11-12"><b>12</b>Nov</time>
+                <div>
+                  <h3>Youth information session</h3>
+                  <p>Thursday, 4:00 p.m. · Online</p>
+                </div>
+                <a class="btn ghost" href="#contact">Register</a>
+              </li>
+              <li>
+                <time datetime="2026-11-19"><b>19</b>Nov</time>
+                <div>
+                  <h3>Employer host site orientation</h3>
+                  <p>Thursday, 10:00 a.m. · Downtown Los Angeles AJCC</p>
+                </div>
+                <a class="btn ghost" href="#contact">Register</a>
+              </li>
+              <li>
+                <time datetime="2026-12-03"><b>3</b>Dec</time>
+                <div>
+                  <h3>Résumé and interview workshop</h3>
+                  <p>Thursday, 3:30 p.m. · Online</p>
+                </div>
+                <a class="btn ghost" href="#contact">Register</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div
+        class="ppanel"
+        role="tabpanel"
+        id="eligibility"
+        aria-labelledby="ptab-eligibility"
+        tabindex="0"
+        hidden
+      >
+        <section>
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Eligibility Criteria</p>
+                <h2>Who can take part</h2>
+              </div>
+              <p>
+                Youth@Work serves LA County youth and the employers who host
+                them.
+              </p>
+            </div>
+            <div class="elig">
+              <article class="bcard">
+                <span class="ico" style="background: var(--aquaD)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="8" r="3.5" />
+                    <path d="M5 20c.8-3.8 3.4-5.5 7-5.5s6.2 1.7 7 5.5" /></svg
+                ></span>
+                <h3>Youth</h3>
+                <ul class="checks">
+                  <li>LA County resident</li>
+                  <li>Ages 14 to 24 at time of enrollment</li>
+                  <li>Legal right to work in the U.S.</li>
+                  <li>High-need communities</li>
+                  <li>Current or former foster youth</li>
+                  <li>Impacted by the justice system</li>
+                  <li>Currently or previously experiencing homelessness</li>
+                  <li>Identify as LGBTQ+</li>
+                </ul>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--coral)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 20V6l8-3 8 3v14M2 20h20M9 9h2M13 9h2M9 13h2M13 13h2"
+                    /></svg
+                ></span>
+                <h3>Employers</h3>
+                <ul class="checks">
+                  <li>Located in LA County</li>
+                  <li>
+                    Must meet with an AJCC to enroll as a participating employer
+                  </li>
+                  <li>
+                    Complete a host site agreement with a detailed training plan
+                  </li>
+                  <li>Provide managerial oversight and a point of contact</li>
+                  <li>Validate hours worked by participants</li>
+                </ul>
+                <p class="note">
+                  DEO is especially looking for employers in the region’s
+                  high-growth sectors that offer pathways to hire.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="tint">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Requirements &amp; Exclusions</p>
+                <h2>What’s required and what isn’t covered</h2>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+            <div class="elig">
+              <article class="bcard">
+                <span class="ico" style="background: var(--aquaD)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12l4 4 10-10" /></svg
+                ></span>
+                <h3>Required documents</h3>
+                <ul class="checks">
+                  <li>Lorem ipsum dolor sit amet</li>
+                  <li>Consectetur adipiscing elit</li>
+                  <li>Sed do eiusmod tempor incididunt</li>
+                  <li>Ut labore et dolore magna aliqua</li>
+                </ul>
+                <p class="note">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo.
+                </p>
+              </article>
+              <article class="bcard">
+                <span class="ico" style="background: var(--coral)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 6l12 12M18 6L6 18" /></svg
+                ></span>
+                <h3>Not eligible</h3>
+                <ul class="checks no">
+                  <li>Ut enim ad minim veniam</li>
+                  <li>Quis nostrud exercitation ullamco</li>
+                  <li>Duis aute irure dolor in reprehenderit</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="dark alt">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Rules &amp; Obligations</p>
+                <h2>Program rules for participants</h2>
+              </div>
+              <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo.
+              </p>
+            </div>
+            <dl class="rules">
+              <div>
+                <dt>Attendance</dt>
+                <dd>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </dd>
+              </div>
+              <div>
+                <dt>Timekeeping</dt>
+                <dd>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo.
+                </dd>
+              </div>
+              <div>
+                <dt>Workplace conduct</dt>
+                <dd>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla.
+                </dd>
+              </div>
+              <div>
+                <dt>Reporting changes</dt>
+                <dd>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+        <section class="tint">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Geography &amp; Priority Areas</p>
+                <h2>Where Youth@Work serves</h2>
+              </div>
+              <p>Areas with a dot are served first.</p>
+            </div>
+            <ul class="chips">
+              <li class="pri">East Los Angeles</li>
+              <li class="pri">South Los Angeles</li>
+              <li class="pri">Antelope Valley</li>
+              <li class="pri">San Gabriel Valley</li>
+              <li>Pomona</li>
+              <li>Long Beach</li>
+              <li>Santa Clarita</li>
+              <li>San Fernando Valley</li>
+              <li>Whittier</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div
+        class="ppanel"
+        role="tabpanel"
+        id="how-to-apply"
+        aria-labelledby="ptab-how-to-apply"
+        tabindex="0"
+        hidden
+      >
+        <section class="tint">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">How to Apply</p>
+                <h2>Step by step</h2>
+              </div>
+              <p>Choose the path that fits you.</p>
+            </div>
+            <div class="tabs" data-tabs>
+              <div class="tablist" role="tablist" aria-label="How to apply">
+                <button
+                  type="button"
+                  role="tab"
+                  id="tab-youth"
+                  aria-selected="true"
+                  aria-controls="panel-youth"
+                >
+                  For Youth
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  id="tab-employers"
+                  aria-selected="false"
+                  aria-controls="panel-employers"
+                  tabindex="-1"
+                >
+                  For Employers
+                </button>
+              </div>
+              <div
+                class="tabpanel"
+                role="tabpanel"
+                id="panel-youth"
+                aria-labelledby="tab-youth"
+                tabindex="0"
               >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
+                <div class="tp-lead solo">
+                  <div class="prose">
+                    <h3>How youth apply</h3>
+                    <ol class="steps">
+                      <li>
+                        <b>Check that you’re eligible</b
+                        ><span
+                          >You live in LA County, are 14 to 24, and have the
+                          legal right to work in the U.S.</span
+                        >
+                      </li>
+                      <li>
+                        <b>Submit the Youth Interest Form</b
+                        ><span>Fill out the interest form to sign up.</span>
+                      </li>
+                      <li>
+                        <b>Hear from an AJCC</b
+                        ><span>AJCC staff will reach out within 48 hours.</span>
+                      </li>
+                      <li>
+                        <b>Complete personal enrichment training</b
+                        ><span
+                          >Join DEO’s Transition Age Youth – World of Work class
+                          with an AJCC: life skills, career pathway planning,
+                          and job portfolio development.</span
+                        >
+                      </li>
+                      <li>
+                        <b>Start your paid work experience</b
+                        ><span
+                          >Work 140 hours with a participating employer host
+                          site, then get connected to hiring, training, and
+                          education opportunities.</span
+                        >
+                      </li>
+                    </ol>
+                    <a
+                      class="btn"
+                      href="https://yaw.opportunity.lacounty.gov/yaw-participant"
+                      target="_blank"
+                      rel="noopener"
+                      >Apply Now
+                      <svg
+                        class="arrow"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 16 16"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M3 8h10M9 4l4 4-4 4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tabpanel"
+                role="tabpanel"
+                id="panel-employers"
+                aria-labelledby="tab-employers"
+                tabindex="0"
+                hidden
+              >
+                <div class="tp-lead solo">
+                  <div class="prose">
+                    <h3>How employers become a host site</h3>
+                    <ol class="steps">
+                      <li>
+                        <b>Reach out to DEO</b
+                        ><span
+                          >Email
+                          <a href="mailto:hireayouth@opportunity.lacounty.gov"
+                            >hireayouth@opportunity.lacounty.gov</a
+                          >
+                          to become a host site.</span
+                        >
+                      </li>
+                      <li>
+                        <b>Hear from an AJCC</b
+                        ><span>AJCC staff will reach out within 48 hours.</span>
+                      </li>
+                      <li>
+                        <b>Enroll as a participating employer</b
+                        ><span
+                          >Meet with an AJCC and identify your demand and
+                          commitments for the program.</span
+                        >
+                      </li>
+                      <li>
+                        <b>Complete a host site agreement</b
+                        ><span
+                          >Include a detailed training plan for the 140
+                          hours.</span
+                        >
+                      </li>
+                      <li>
+                        <b>Name a manager and point of contact</b
+                        ><span
+                          >Provide managerial oversight and a contact for the
+                          lead AJCC.</span
+                        >
+                      </li>
+                      <li>
+                        <b>Host youth and validate hours</b
+                        ><span>Confirm the hours worked by participants.</span>
+                      </li>
+                    </ol>
+                    <a
+                      class="btn"
+                      href="mailto:hireayouth@opportunity.lacounty.gov"
+                      >Become a host site
+                      <svg
+                        class="arrow"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 16 16"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M3 8h10M9 4l4 4-4 4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="dark">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Status &amp; Key Dates</p>
+                <h2>Enrollment status</h2>
+              </div>
+            </div>
+            <div class="pill-row">
+              <span class="pill open">Open for enrollment</span>
+            </div>
+            <dl class="rules">
+              <div>
+                <dt>Applications</dt>
+                <dd>Rolling, year-round</dd>
+              </div>
+              <div>
+                <dt>Next orientation</dt>
+                <dd>November 12, 2026</dd>
+              </div>
+              <div>
+                <dt>Program year ends</dt>
+                <dd>June 30, 2027</dd>
+              </div>
+            </dl>
+            <p class="note">
+              Sample dates for layout only. Pending client answer on deadlines.
+            </p>
+          </div>
+        </section>
+        <section class="tint">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Full Details</p>
+                <h2>Program terms in full</h2>
+              </div>
+            </div>
+            <div class="drawer">
+              <details>
+                <summary>Full program terms and conditions</summary>
+                <div class="a">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo.
+                  </p>
+                  <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla. Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>Definitions used on this page</summary>
+                <div class="a">
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        class="ppanel"
+        role="tabpanel"
+        id="results"
+        aria-labelledby="ptab-results"
+        tabindex="0"
+        hidden
+      >
+        <section class="stat-band">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">By the Numbers</p>
+                <h2>Youth@Work by the numbers</h2>
+              </div>
+              <p>
+                $45,336,809 invested, including $9,662,400 in American Rescue
+                Plan Act pandemic recovery funds.
+              </p>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <b data-count="770">0</b><span>Youth joined paid training</span>
+              </div>
+              <div class="stat">
+                <b data-count="7376">0</b
+                ><span>Participants gained work experience</span>
+              </div>
+              <div class="stat">
+                <b data-count="1594">0</b
+                ><span>Youth moved into paid jobs</span>
+              </div>
+              <div class="stat">
+                <b data-count="455">0</b
+                ><span>Participants continued their education</span>
+              </div>
+              <div class="stat">
+                <b data-count="40">0</b
+                ><span>Youth entered advanced skills training</span>
+              </div>
+              <div class="stat">
+                <b data-count="929">0</b
+                ><span>Businesses hosted participants</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Reports &amp; Policy Background</p>
+                <h2>Reports and policy background</h2>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+            </div>
+            <ul class="doclist">
+              <li>
+                <a
+                  href="https://opportunity.lacounty.gov/wp-content/uploads/2026/08/DEO-Y@W-Review-and-Redesign-Report-Aug-2026.pdf"
+                  ><span class="ft">PDF</span
+                  ><span class="t"
+                    >2026 Program Review and Redesign Report<small
+                      >Report · August 2026</small
+                    ></span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="ft">PDF</span
+                  ><span class="t"
+                    >Youth@Work Annual Outcomes Summary<small
+                      >Report · Sample</small
+                    ></span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="ft">PDF</span
+                  ><span class="t"
+                    >Board motion on youth workforce expansion<small
+                      >Policy · Sample</small
+                    ></span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="tint">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Gallery</p>
+                <h2>Youth@Work in action</h2>
+              </div>
+            </div>
+            <ul class="gal">
+              <li>
+                <button
+                  type="button"
+                  class="gal-item"
+                  aria-label="View larger: Youth collaborating on a work project."
+                >
+                  <span class="ph"
+                    ><img
+                      src="assets/img-YouthGroupPhoto-AroundTable.webp"
+                      alt="Youth collaborating on a work project."
+                      loading="lazy"
+                  /></span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="gal-item"
+                  aria-label="View larger: Youth with a completion certificate."
+                >
+                  <span class="ph"
+                    ><img
+                      src="assets/img-Youth-Photo-with-CompletionCertificate-solo.webp"
+                      alt="Youth with a completion certificate."
+                      loading="lazy"
+                  /></span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="gal-item"
+                  aria-label="View larger: Group shot including Youth@Work ELEVATE members."
+                >
+                  <span class="ph"
+                    ><img
+                      src="assets/img-YouthGroupPhoto-SpongeBob-1.webp"
+                      alt="Group shot including Youth@Work ELEVATE members."
+                      loading="lazy"
+                  /></span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="gal-item"
+                  aria-label="View larger: Youth with a completion certificate, standing with mentors."
+                >
+                  <span class="ph"
+                    ><img
+                      src="assets/img-Youth-Photo-with-CompletionCertificate.webp"
+                      alt="Youth with a completion certificate, standing with mentors."
+                      loading="lazy"
+                  /></span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="gal-item"
+                  aria-label="View larger: Youth@Work event with booths and youth attending."
+                >
+                  <span class="ph"
+                    ><img
+                      src="assets/img-34-5-edited-1.webp"
+                      alt="Youth@Work event with booths and youth attending."
+                      loading="lazy"
+                  /></span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="gal-item"
+                  aria-label="View larger: Youth attending a Youth@Work event."
+                >
+                  <span class="ph"
+                    ><img
+                      src="assets/img-Untitled-design-19-1-1.webp"
+                      alt="Youth attending a Youth@Work event."
+                      loading="lazy"
+                  /></span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div
+        class="ppanel"
+        role="tabpanel"
+        id="faqs-resources"
+        aria-labelledby="ptab-faqs-resources"
+        tabindex="0"
+        hidden
+      >
+        <section class="tint" id="faq">
+          <div class="w split">
+            <div>
+              <p class="eyebrow">Frequently Asked Questions</p>
+              <h2>Common questions</h2>
+            </div>
+            <div class="faq">
+              <details>
+                <summary>Who is eligible for Youth@Work?</summary>
+                <div class="a">
+                  <p>
+                    Youth must live in LA County, be 14 to 24 at the time of
+                    enrollment, and have the legal right to work in the U.S. The
+                    program focuses on supporting youth from high-need
+                    communities, including current or former foster youth, youth
+                    impacted by the justice system, youth currently or
+                    previously experiencing homelessness, and LGBTQ+ youth.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>Is the work paid?</summary>
+                <div class="a">
+                  <p>
+                    Yes. Participants gain paid work experience with a
+                    participating employer host site: 140 hours in the
+                    traditional, year-round program.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>What does the program include?</summary>
+                <div class="a">
+                  <p>
+                    Personal enrichment training through DEO’s Transition Age
+                    Youth – World of Work class with an AJCC (life skills,
+                    career pathway planning, and job portfolio development),
+                    paid work experience, supportive services and mentorship,
+                    and a post-program connection to additional hiring,
+                    training, and education opportunities.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>How do I apply?</summary>
+                <div class="a">
+                  <p>
+                    Fill out the Youth Interest Form. AJCC staff will reach out
+                    within 48 hours.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>What industries are involved?</summary>
+                <div class="a">
+                  <p>
+                    DEO works with employers in high-growth sectors: Aerospace
+                    and Defense, Life Sciences, Construction and Infrastructure,
+                    Creative Sector, Early Care and Education, Healthcare,
+                    Hospitality and Tourism, Information Technology and Trade,
+                    and Transportation and Logistics.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>How can my business become a host site?</summary>
+                <div class="a">
+                  <p>
+                    Email
+                    <a href="mailto:hireayouth@opportunity.lacounty.gov"
+                      >hireayouth@opportunity.lacounty.gov</a
+                    >. AJCC staff will reach out within 48 hours to help you
+                    enroll, complete a host site agreement with a training plan,
+                    and name a point of contact.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>What do employers get?</summary>
+                <div class="a">
+                  <p>
+                    Access to a new and emerging talent pipeline for up to four
+                    months of part-time work, with wage and insurance subsidies.
+                  </p>
+                </div>
+              </details>
+              <details>
+                <summary>What happens after the program?</summary>
+                <div class="a">
+                  <p>
+                    Youth are connected to additional hiring, training, and
+                    education opportunities, and to employment in high-growth
+                    sectors.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section id="resources">
+          <div class="w">
+            <div class="split">
+              <div>
+                <p class="eyebrow">Additional Resources</p>
+                <h2>News and related programs</h2>
+              </div>
+              <div class="qllist">
+                <a
+                  href="https://yaw.opportunity.lacounty.gov/yaw-participant"
+                  target="_blank"
+                  rel="noopener"
+                  ><span>Youth Interest Form</span
+                  ><svg
+                    class="ch"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></a
+                ><a
+                  href="https://yaw.opportunity.lacounty.gov/yaw-worksite"
+                  target="_blank"
+                  rel="noopener"
+                  ><span>Employer Interest Form</span
+                  ><svg
+                    class="ch"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></a
+                ><a
+                  href="https://opportunity.lacounty.gov/wp-content/uploads/2026/08/DEO-Y@W-Review-and-Redesign-Report-Aug-2026.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  ><span>2026 Program Review and Redesign Report (PDF)</span
+                  ><svg
+                    class="ch"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></a
+                ><a
+                  href="https://opportunity.lacounty.gov/la-county-deo-releases-youthwork-program-review-and-redesign-report-to-strengthen-economic-mobility-for-young-people/"
+                  target="_blank"
+                  rel="noopener"
+                  ><span
+                    >LA County DEO Releases Youth@Work Program Review and
+                    Redesign Report to Strengthen Economic Mobility for Young
+                    People<small>Press release · August 25, 2026</small></span
+                  ><svg
+                    class="ch"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></a
+                ><a href="youthatwork.html"
+                  ><span>High Road Training Partnerships (related program)</span
+                  ><svg
+                    class="ch"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></a
+                ><a href="index.html#contact"
+                  ><span>Contact DEO</span
+                  ><svg
+                    class="ch"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+
+            <div class="res-block">
+              <h3>Worksites</h3>
+              <ul class="gal two wide">
+                <li>
+                  <button
+                    type="button"
+                    class="gal-item"
+                    aria-label="View larger: Youth@Work worksite banner 1"
+                  >
+                    <span class="ph"
+                      ><img
+                        src="assets/Banner-Eventbrite-MEHKOs-2.webp"
+                        alt="Youth@Work worksite banner 1"
+                        loading="lazy"
+                    /></span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="gal-item"
+                    aria-label="View larger: Youth@Work worksite banner 2"
+                  >
+                    <span class="ph"
+                      ><img
+                        src="assets/Banner-Eventbrite-MEHKOs-3.webp"
+                        alt="Youth@Work worksite banner 2"
+                        loading="lazy"
+                    /></span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="gal-item"
+                    aria-label="View larger: Youth@Work worksite banner 3"
+                  >
+                    <span class="ph"
+                      ><img
+                        src="assets/Banner-Eventbrite-MEHKOs-5.webp"
+                        alt="Youth@Work worksite banner 3"
+                        loading="lazy"
+                    /></span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="gal-item"
+                    aria-label="View larger: Youth@Work worksite banner 4"
+                  >
+                    <span class="ph"
+                      ><img
+                        src="assets/Banner-Eventbrite-MEHKOs-4.webp"
+                        alt="Youth@Work worksite banner 4"
+                        loading="lazy"
+                    /></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="dark alt">
+          <div class="w">
+            <div class="hd2">
+              <div>
+                <p class="eyebrow">Partners &amp; Funding</p>
+                <h2>Who makes Youth@Work possible</h2>
+              </div>
+            </div>
+            <div class="prose">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo.
+              </p>
+            </div>
+            <div class="res-block" style="margin-top: 36px">
+              <h3>Partners</h3>
+              <ul class="logos">
+                <li>
+                  <img
+                    src="assets/logo-Americas-Job-Ctr-LACo-CA.webp"
+                    alt="America’s Job Center of California, LA County"
+                    loading="lazy"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/logo-LA-Works.webp"
+                    alt="LA Works"
+                    loading="lazy"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/logo-Antelope-Valley-Medical-Center.webp"
+                    alt="Antelope Valley Medical Center"
+                    loading="lazy"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/logo-Project-Hope-CA.webp"
+                    alt="Project Hope CA"
+                    loading="lazy"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/logo-Smart-Final.webp"
+                    alt="Smart & Final"
+                    loading="lazy"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="cta">
+        <div class="w">
+          <div
+            class="ph"
+            style="aspect-ratio: auto; height: 100%; min-height: 280px"
+          >
+            <img
+              src="assets/img-Noggin-Photo-edited.webp"
+              alt="Group of about 25 people smiling in front of a large, colorful mural."
+              style="
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              "
+            />
+          </div>
+          <div class="body">
+            <p class="eyebrow">Ready to Get Started?</p>
+            <h2>Start your Youth@Work journey.</h2>
+            <p>
+              Fill out the interest form and an AJCC staff member will reach out
+              within 48 hours.
+            </p>
+            <div class="actions">
+              <a
+                class="btn"
+                href="https://yaw.opportunity.lacounty.gov/yaw-participant"
+                target="_blank"
+                rel="noopener"
+                >Apply Now
+                <svg
+                  class="arrow"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg></a
+              ><a
+                class="btn ghost"
+                href="https://yaw.opportunity.lacounty.gov/yaw-worksite"
+                target="_blank"
+                rel="noopener"
+                >Become a Host Employer
+                <svg
+                  class="arrow"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+              ></a>
+            </div>
           </div>
         </div>
       </section>
-      <section class="tint">
+      <section id="downloads">
+        <div class="w split">
+          <div>
+            <p class="eyebrow">Downloads</p>
+            <h2>Forms and reports</h2>
+          </div>
+          <ul class="doclist">
+            <li>
+              <a
+                href="https://yaw.opportunity.lacounty.gov/yaw-participant"
+                target="_blank"
+                rel="noopener"
+                ><span class="ft">Form</span
+                ><span class="t"
+                  >Youth Interest Form<small
+                    >For youth ages 14 to 24</small
+                  ></span
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://yaw.opportunity.lacounty.gov/yaw-worksite"
+                target="_blank"
+                rel="noopener"
+                ><span class="ft">Form</span
+                ><span class="t"
+                  >Employer Interest Form<small
+                    >For prospective host sites</small
+                  ></span
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://opportunity.lacounty.gov/wp-content/uploads/2026/08/DEO-Y@W-Review-and-Redesign-Report-Aug-2026.pdf"
+                target="_blank"
+                rel="noopener"
+                ><span class="ft">PDF</span
+                ><span class="t"
+                  >2026 Program Review and Redesign Report<small
+                    >Report · August 2026</small
+                  ></span
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="dark" id="contact">
         <div class="w">
           <div class="hd2">
             <div>
-              <p class="eyebrow">Program Benefits</p>
-              <h2>What Youth@Work offers</h2>
+              <p class="eyebrow">Contact</p>
+              <h2>Get help with Youth@Work</h2>
+            </div>
+            <p>An AJCC staff member will reach out within 48 hours.</p>
+          </div>
+          <div class="contact">
+            <article class="bcard">
+              <h3>Youth and families</h3>
+              <p>
+                Fill out the interest form to sign up. Your local AJCC takes it
+                from there.
+              </p>
+              <div class="actions">
+                <a
+                  class="btn"
+                  href="https://yaw.opportunity.lacounty.gov/yaw-participant"
+                  target="_blank"
+                  rel="noopener"
+                  >Youth Interest Form</a
+                >
+              </div>
+            </article>
+            <article class="bcard">
+              <h3>Employers and host sites</h3>
+              <p>Email DEO to become a host site.</p>
+              <p>
+                <a href="mailto:hireayouth@opportunity.lacounty.gov"
+                  >hireayouth@opportunity.lacounty.gov</a
+                >
+              </p>
+            </article>
+            <article class="bcard">
+              <h3>Visit an AJCC</h3>
+              <p>
+                Get in-person help at your nearest America’s Job Center of
+                California.
+              </p>
+              <div class="actions">
+                <a class="btn ghost" href="category.html">Find a center</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="w">
+          <div class="hd2">
+            <div>
+              <p class="eyebrow">Related programs</p>
+              <h2>More ways DEO can help</h2>
             </div>
           </div>
           <div class="path cols3">
-            <article class="bcard">
-              <span class="ico" style="background: var(--avocado)"
-                ><svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="7" width="18" height="10" rx="2" />
-                  <circle cx="12" cy="12" r="2.4" />
-                </svg>
-              </span>
-              <h3>Paid work experience</h3>
-              <p>
-                160 hours of personal enrichment training and paid work
-                experience for youth across LA County.
-              </p>
-            </article>
-            <article class="bcard">
-              <span class="ico" style="background: var(--purple)">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="8" width="18" height="12" rx="2" />
-                  <path d="M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18" />
-                </svg>
-              </span>
-              <h3>Career readiness support</h3>
-              <p>
-                Paid training, mentorship, and hands-on experience in
-                high-demand industries.
-              </p>
-            </article>
-            <article class="bcard">
-              <span class="ico" style="background: var(--blue)">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="9" />
-                  <path
-                    d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9Z"
-                  />
-                </svg>
-              </span>
-              <h3>Equity-centered opportunities</h3>
-              <p>
-                Support for youth affected by economic and climate crises and by
-                systemic barriers, including foster, unhoused, LGBTQ+, and
-                justice-involved youth.
-              </p>
-            </article>
-            <article class="bcard">
-              <span class="ico" style="background: var(--coral)">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 20V6l8-3 8 3v14M2 20h20M9 9h2M13 9h2M9 13h2M13 13h2"
-                  />
-                </svg>
-              </span>
-              <h3>Pathways into high-demand industries</h3>
-              <p>
-                Training aligned with regional workforce needs in healthcare,
-                infrastructure, technology, and creative sectors.
-              </p>
-            </article>
-            <article class="bcard">
-              <span class="ico" style="background: var(--aquaD)">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 21v-9M12 12c0-4 2.5-6 7-6 0 4-2.5 6-7 6ZM12 14c0-3-2-5-6-5 0 3 2 5 6 5Z"
-                  />
-                </svg>
-              </span>
-              <h3>Leadership and professional growth</h3>
-              <p>
-                Workshops on leadership, career planning, and peer support build
-                confidence and lasting networks.
-              </p>
-            </article>
-            <article class="bcard">
-              <span class="ico" style="background: var(--deep)"
-                ><svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="9" cy="9" r="3" />
-                  <path d="M3 19c.8-3 3-4.5 6-4.5s5.2 1.5 6 4.5" />
-                  <circle cx="17" cy="8" r="2.4" />
-                  <path d="M17 13.5c2.2 0 3.7 1.2 4.3 3.5" />
-                </svg>
-              </span>
-              <h3>Partnerships with employers</h3>
-              <p>
-                Employers get access to an emerging talent pipeline for up to
-                four months of part-time work, with wage and insurance
-                subsidies.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="w">
-          <div class="hd2">
-            <div>
-              <p class="eyebrow">Worksites</p>
-              <h2>Youth@Work worksites</h2>
-            </div>
-            <p>Select an image to view it larger.</p>
-          </div>
-          <ul class="gal two wide">
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth@Work worksite banner 1"
+            <article class="pcard">
+              <div
+                class="ph"
+                style="aspect-ratio: 4/3; border-radius: 20px 20px 0 0"
               >
-                <span class="ph"
-                  ><img
-                    src="assets/Banner-Eventbrite-MEHKOs-2.webp"
-                    alt="Youth@Work worksite banner 1"
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth@Work worksite banner 2"
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/Banner-Eventbrite-MEHKOs-3.webp"
-                    alt="Youth@Work worksite banner 2"
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth@Work worksite banner 3"
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/Banner-Eventbrite-MEHKOs-5.webp"
-                    alt="Youth@Work worksite banner 3"
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth@Work worksite banner 4"
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/Banner-Eventbrite-MEHKOs-4.webp"
-                    alt="Youth@Work worksite banner 4"
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="tint" id="employers-youth">
-        <div class="w">
-          <div class="hd2">
-            <div>
-              <p class="eyebrow">Get Involved</p>
-              <h2>Join Youth@Work</h2>
-            </div>
-            <p>Choose the path that fits you.</p>
-          </div>
-          <div class="tabs" data-tabs>
-            <div
-              class="tablist"
-              role="tablist"
-              aria-label="Youth@Work audiences"
-            >
-              <button
-                type="button"
-                role="tab"
-                id="tab-employers"
-                aria-selected="true"
-                aria-controls="panel-employers"
-              >
-                For Employers
-              </button>
-              <button
-                type="button"
-                role="tab"
-                id="tab-youth"
-                aria-selected="false"
-                aria-controls="panel-youth"
-                tabindex="-1"
-              >
-                For Youth
-              </button>
-            </div>
-            <div
-              class="tabpanel"
-              role="tabpanel"
-              id="panel-employers"
-              aria-labelledby="tab-employers"
-              tabindex="0"
-            >
-              <div class="tp-lead">
-                <div class="prose">
-                  <h3>For Employers</h3>
-                  <p>
-                    Youth@Work enrolls employers as host sites. Host sites work
-                    with an AJCC to enroll as a participating employer, identify
-                    employer demand and commitments, complete a host site
-                    agreement with a detailed training plan for the 140 hours,
-                    name a manager and point of contact for the lead AJCC, and
-                    validate hours worked by youth.
-                  </p>
-                  <p>
-                    DEO is looking for employers in the region’s high-growth
-                    sectors that offer pathways to hire: Aerospace and Defense,
-                    Life Sciences, Construction and Infrastructure, Creative
-                    Sector, Early Care and Education, Healthcare, Hospitality
-                    and Tourism, Information Technology and Trade, and
-                    Transportation and Logistics.
-                  </p>
-                </div>
-                <div class="ph">
-                  <img
-                    src="assets/img-YouthGroupPhoto-AroundTable.webp"
-                    alt="Youth and employers making plans at a table."
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div class="tp-cols">
-                <div>
-                  <h3>Eligibility for businesses</h3>
-                  <ul class="checks">
-                    <li>Located in LA County</li>
-                    <li>
-                      Must meet with an AJCC to enroll as a participating
-                      employer
-                    </li>
-                    <li>
-                      Complete a host site agreement with a detailed training
-                      plan
-                    </li>
-                    <li>Provide managerial oversight and a point of contact</li>
-                    <li>Validate hours worked by participants</li>
-                  </ul>
-                </div>
-                <div class="prose">
-                  <h3>How to partner</h3>
-                  <p>
-                    Employers across LA County can become a host site by
-                    emailing
-                    <a href="mailto:hireayouth@opportunity.lacounty.gov"
-                      >hireayouth@opportunity.lacounty.gov</a
-                    >. AJCC staff will reach out within 48 hours.
-                  </p>
-                  <a
-                    class="btn"
-                    href="mailto:hireayouth@opportunity.lacounty.gov"
-                    >Become a host site
-                    <svg
-                      class="arrow"
-                      width="15"
-                      height="15"
-                      viewBox="0 0 16 16"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M3 8h10M9 4l4 4-4 4"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tabpanel"
-              role="tabpanel"
-              id="panel-youth"
-              aria-labelledby="tab-youth"
-              tabindex="0"
-              hidden
-            >
-              <div class="tp-lead">
-                <div class="prose">
-                  <h3>For Youth</h3>
-                  <ul class="checks">
-                    <li>
-                      Personal enrichment programming through DEO’s Transition
-                      Age Youth – World of Work class with an AJCC, including
-                      life skills, career pathway planning, and job portfolio
-                      development and readiness
-                    </li>
-                    <li>
-                      Traditional, year-round Youth@Work Program:
-                      <ul class="checks">
-                        <li>
-                          140 hours of paid work experience with hundreds of
-                          participating employer partners as host sites
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      Post-program connection to additional hiring, training,
-                      and education opportunities
-                    </li>
-                    <li>Connection to employment in high-growth sectors</li>
-                    <li>
-                      Connection to supportive services and a mentorship program
-                    </li>
-                  </ul>
-                </div>
-                <div class="ph">
-                  <img
-                    src="assets/img-Noggin-Photo-edited.webp"
-                    alt="Group of about 25 people smiling in front of a large, colorful mural."
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div class="tp-cols">
-                <div>
-                  <h3>Eligibility for youth</h3>
-                  <ul class="checks">
-                    <li>LA County resident</li>
-                    <li>Ages 14 to 24 at time of enrollment</li>
-                    <li>Legal right to work in the U.S.</li>
-                    <li>High-need communities</li>
-                    <li>Current or former foster youth</li>
-                    <li>Impacted by the justice system</li>
-                    <li>Currently or previously experiencing homelessness</li>
-                    <li>Identify as LGBTQ+</li>
-                  </ul>
-                </div>
-                <div class="prose">
-                  <h3>Get started</h3>
-                  <p>
-                    Interested and eligible youth can sign up with the interest
-                    form. AJCC staff will reach out within 48 hours.
-                  </p>
-                  <a
-                    class="btn"
-                    href="https://yaw.opportunity.lacounty.gov/yaw-participant"
-                    target="_blank"
-                    rel="noopener"
-                    >Youth Interest Form
-                    <svg
-                      class="arrow"
-                      width="15"
-                      height="15"
-                      viewBox="0 0 16 16"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M3 8h10M9 4l4 4-4 4"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="stat-band">
-        <div class="w">
-          <div class="hd2">
-            <div>
-              <p class="eyebrow">By the Numbers</p>
-              <h2>Youth@Work by the numbers</h2>
-            </div>
-            <p>
-              $45,336,809 invested, including $9,662,400 in American Rescue Plan
-              Act pandemic recovery funds.
-            </p>
-          </div>
-          <div class="stat-grid">
-            <div class="stat">
-              <b data-count="770">0</b><span>Youth joined paid training</span>
-            </div>
-            <div class="stat">
-              <b data-count="7376">0</b
-              ><span>Participants gained work experience</span>
-            </div>
-            <div class="stat">
-              <b data-count="1594">0</b><span>Youth moved into paid jobs</span>
-            </div>
-            <div class="stat">
-              <b data-count="455">0</b
-              ><span>Participants continued their education</span>
-            </div>
-            <div class="stat">
-              <b data-count="40">0</b
-              ><span>Youth entered advanced skills training</span>
-            </div>
-            <div class="stat">
-              <b data-count="929">0</b
-              ><span>Businesses hosted participants</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="w">
-          <div class="hd2">
-            <div>
-              <p class="eyebrow">Gallery</p>
-              <h2>Youth@Work in photos</h2>
-            </div>
-            <p>Select a photo to view it larger.</p>
-          </div>
-          <ul class="gal">
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth collaborating on a work project."
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/img-YouthGroupPhoto-AroundTable.webp"
-                    alt="Youth collaborating on a work project."
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth with a completion certificate."
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/img-Youth-Photo-with-CompletionCertificate-solo.webp"
-                    alt="Youth with a completion certificate."
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Group shot including Youth@Work ELEVATE members."
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/img-YouthGroupPhoto-SpongeBob-1.webp"
-                    alt="Group shot including Youth@Work ELEVATE members."
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth with a completion certificate, standing with mentors."
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/img-Youth-Photo-with-CompletionCertificate.webp"
-                    alt="Youth with a completion certificate, standing with mentors."
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth@Work event with booths and youth attending."
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/img-34-5-edited-1.webp"
-                    alt="Youth@Work event with booths and youth attending."
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                class="gal-item"
-                aria-label="View larger: Youth attending a Youth@Work event."
-              >
-                <span class="ph"
-                  ><img
-                    src="assets/img-Untitled-design-19-1-1.webp"
-                    alt="Youth attending a Youth@Work event."
-                    loading="lazy"
-                /></span>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="tint">
-        <div class="w">
-          <div class="hd2">
-            <div>
-              <p class="eyebrow">Partners</p>
-              <h2>Our partners</h2>
-            </div>
-          </div>
-          <ul class="logos">
-            <li>
-              <img
-                src="assets/logo-Americas-Job-Ctr-LACo-CA.webp"
-                alt="America’s Job Center of California, LA County"
-                loading="lazy"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/logo-LA-Works.webp"
-                alt="LA Works"
-                loading="lazy"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/logo-Antelope-Valley-Medical-Center.webp"
-                alt="Antelope Valley Medical Center"
-                loading="lazy"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/logo-Project-Hope-CA.webp"
-                alt="Project Hope CA"
-                loading="lazy"
-              />
-            </li>
-            <li>
-              <img
-                src="assets/logo-Smart-Final.webp"
-                alt="Smart & Final"
-                loading="lazy"
-              />
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <div class="w split">
-          <div>
-            <p class="eyebrow">Press and Media</p>
-            <h2>In the news</h2>
-          </div>
-          <div class="qllist">
-            <a
-              href="https://opportunity.lacounty.gov/la-county-deo-releases-youthwork-program-review-and-redesign-report-to-strengthen-economic-mobility-for-young-people/"
-              target="_blank"
-              rel="noopener"
-              ><span
-                >LA County DEO Releases Youth@Work Program Review and Redesign
-                Report to Strengthen Economic Mobility for Young People<small
-                  >August 25, 2026</small
-                ></span
-              ><svg
-                class="ch"
-                width="14"
-                height="14"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <img
+                  src="assets/img-ARF-Construction-HRTP.webp"
+                  alt="Trainees working alongside an instructor."
+                  loading="lazy"
                 />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="ql tint">
-        <div class="w">
-          <div>
-            <p class="eyebrow">Quick Links</p>
-            <h2>Get to what you need</h2>
-            <p>Sign up, partner with us, or read the latest program report.</p>
-          </div>
-          <div class="qllist">
-            <a
-              href="https://yaw.opportunity.lacounty.gov/yaw-participant"
-              target="_blank"
-              rel="noopener"
-              >Youth Interest Form<svg
-                class="ch"
-                width="14"
-                height="14"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
+              </div>
+              <div class="body" style="padding-top: 22px">
+                <h3>High Road Training Partnerships</h3>
+                <p>Industry-led training that leads to quality jobs.</p>
+                <a class="link" href="youthatwork.html"
+                  >Learn more <span class="arrow">→</span></a
+                >
+              </div>
+            </article>
+            <article class="pcard">
+              <div
+                class="ph"
+                style="aspect-ratio: 4/3; border-radius: 20px 20px 0 0"
               >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg></a
-            ><a
-              href="https://yaw.opportunity.lacounty.gov/yaw-worksite"
-              target="_blank"
-              rel="noopener"
-              >Employer Interest Form<svg
-                class="ch"
-                width="14"
-                height="14"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                /></svg></a
-            ><a
-              href="https://opportunity.lacounty.gov/wp-content/uploads/2026/08/DEO-Y@W-Review-and-Redesign-Report-Aug-2026.pdf"
-              target="_blank"
-              rel="noopener"
-              >Program Review and Redesign Report (PDF)<svg
-                class="ch"
-                width="14"
-                height="14"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <img
+                  src="assets/img-promo-table-pose.webp"
+                  alt="Job seekers meeting with a career counselor."
+                  loading="lazy"
                 />
-              </svg>
-            </a>
-            <a href="youthatwork.html"
-              >High Road Training Partnerships
-              <svg
-                class="ch"
-                width="14"
-                height="14"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
+              </div>
+              <div class="body" style="padding-top: 22px">
+                <h3>America’s Job Centers of California</h3>
+                <p>Free career services at centers across the county.</p>
+                <a class="link" href="youthatwork.html"
+                  >Learn more <span class="arrow">→</span></a
+                >
+              </div>
+            </article>
+            <article class="pcard">
+              <div
+                class="ph"
+                style="aspect-ratio: 4/3; border-radius: 20px 20px 0 0"
               >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                <img
+                  src="assets/img-SBC.webp"
+                  alt="Board members meeting around a table."
+                  loading="lazy"
                 />
-              </svg>
-            </a>
-          </div>
-          <div class="help">
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 17h.01M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2-2 2.5-.4.4-.5.7-.5 1.5"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="9.5"
-                stroke="currentColor"
-                stroke-width="1.6"
-              />
-            </svg>
-            <h3>Need Help?</h3>
-            <p>Have a question or need personalized assistance?</p>
-            <a class="btn" href="index.html#contact"
-              >Contact Us
-              <svg
-                class="arrow"
-                width="15"
-                height="15"
-                viewBox="0 0 16 16"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 8h10M9 4l4 4-4 4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
+              </div>
+              <div class="body" style="padding-top: 22px">
+                <h3>Workforce Development Board</h3>
+                <p>Business and community leaders guiding workforce policy.</p>
+                <a class="link" href="youthatwork.html"
+                  >Learn more <span class="arrow">→</span></a
+                >
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1110,7 +2032,7 @@
         </svg>
       </button>
     </dialog>
-    <footer id="contact">
+    <footer>
       <div class="w fmain">
         <a class="logo" href="index.html"
           ><span
@@ -1274,6 +2196,70 @@
         );
         grids.forEach((g) => io.observe(g));
       })();
+      // Page-level tabs: [data-ptabs]. Panels are hardcoded; script toggles [hidden].
+      // With data-hash, #eligibility (or any id inside a panel) opens that tab on load and on hashchange.
+      document.querySelectorAll("[data-ptabs]").forEach((w) => {
+        const sc = w.querySelector(".ptabs-scroll");
+        const tabs = [...w.querySelectorAll('[role="tab"]')];
+        const panels = tabs.map((t) =>
+          document.getElementById(t.getAttribute("aria-controls")),
+        );
+        const fade = () => {
+          const max = sc.scrollWidth - sc.clientWidth;
+          sc.style.setProperty("--fl", sc.scrollLeft > 4 ? "32px" : "0px");
+          sc.style.setProperty(
+            "--fr",
+            max - sc.scrollLeft > 4 ? "40px" : "0px",
+          );
+        };
+        const show = (i, focus) => {
+          tabs.forEach((t, j) => {
+            t.setAttribute("aria-selected", i === j);
+            t.tabIndex = i === j ? 0 : -1;
+            panels[j].hidden = i !== j;
+          });
+          sc.scrollTo({ left: tabs[i].offsetLeft - 24, behavior: "smooth" });
+          if (focus) tabs[i].focus();
+        };
+        tabs.forEach((t, i) => {
+          t.addEventListener("click", () => {
+            show(i);
+            if (w.hasAttribute("data-hash"))
+              history.replaceState(null, "", "#" + panels[i].id);
+            const off =
+              parseFloat(
+                getComputedStyle(document.documentElement).scrollPaddingTop,
+              ) || 0;
+            const top = panels[i].getBoundingClientRect().top;
+            if (top < off) scrollTo({ top: scrollY + top - off });
+          });
+          t.addEventListener("keydown", (e) => {
+            const k = {
+              ArrowRight: i + 1,
+              ArrowLeft: i - 1,
+              Home: 0,
+              End: tabs.length - 1,
+            }[e.key];
+            if (k === undefined) return;
+            e.preventDefault();
+            show((k + tabs.length) % tabs.length, true);
+          });
+        });
+        sc.addEventListener("scroll", fade, { passive: true });
+        addEventListener("resize", fade);
+        fade();
+        if (w.hasAttribute("data-hash")) {
+          const fromHash = () => {
+            const el = document.getElementById(location.hash.slice(1));
+            const i = el ? panels.findIndex((p) => p.contains(el)) : -1;
+            if (i < 0) return;
+            show(i);
+            requestAnimationFrame(() => el.scrollIntoView());
+          };
+          addEventListener("hashchange", fromHash);
+          fromHash();
+        }
+      });
     </script>
   </body>
 </html>
