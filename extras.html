@@ -29,6 +29,7 @@
       .doc-head p {
         color: var(--mute);
       }
+      .doc-head .eyebrow { color: var(--mute); } /* eyebrow inherits the old .doc-head p color */
       .doc-component {
         margin-bottom: 88px;
       }
@@ -128,9 +129,9 @@
     <main class="doc-wrap">
       <div class="w">
         <div class="doc-head">
-          <p class="eyebrow">Design System</p>
           <h1 style="font-size: clamp(1.9rem, 3.6vw, 2.6rem)">
-            Shared components
+            <span class="eyebrow">Design System</span><span class="sr-only">: </span>
+            <span class="headline">Shared components</span>
           </h1>
           <p>
             Reusable pieces built on <code>style.css</code>. Each one below is
@@ -160,8 +161,10 @@
               <div class="w">
                 <div class="hd2">
                   <div>
-                    <p class="eyebrow">By the Numbers</p>
-                    <h2>Real results for LA County businesses</h2>
+                    <h2>
+                      <span class="eyebrow">By the Numbers</span><span class="sr-only">: </span>
+                      <span class="headline">Real results for LA County businesses</span>
+                    </h2>
                   </div>
                   <p>
                     Since program launch, the Office of Small Business has
@@ -201,9 +204,7 @@
           </div>
           <div class="doc-code">
             &lt;section class="stat-band"&gt; &lt;div class="w"&gt; &lt;div
-            class="hd2"&gt; &lt;div&gt; &lt;p class="eyebrow"&gt;By the
-            Numbers&lt;/p&gt; &lt;h2&gt;Real results for LA County
-            businesses&lt;/h2&gt; &lt;/div&gt; &lt;p&gt;One short sentence of
+            class="hd2"&gt; &lt;div&gt; &lt;h2&gt;&lt;span class="eyebrow"&gt;By the Numbers&lt;/span&gt;&lt;span class="sr-only"&gt;: &lt;/span&gt;&lt;span class="headline"&gt;Real results for LA County businesses&lt;/span&gt;&lt;/h2&gt; &lt;/div&gt; &lt;p&gt;One short sentence of
             context goes here.&lt;/p&gt; &lt;/div&gt; &lt;div
             class="stat-grid"&gt; &lt;!-- plain integer --&gt; &lt;div
             class="stat"&gt;&lt;b
@@ -1348,8 +1349,10 @@
             <div class="w">
               <div class="hd2">
                 <div>
-                  <p class="eyebrow">Eyebrow</p>
-                  <h2>Dark section title</h2>
+                  <h2>
+                    <span class="eyebrow">Eyebrow</span><span class="sr-only">: </span>
+                    <span class="headline">Dark section title</span>
+                  </h2>
                 </div>
                 <p>Supporting line in light blue.</p>
               </div>
@@ -1373,9 +1376,7 @@
         <div class="doc-code">
           &lt;section class=&quot;dark&quot;&gt;&lt;div
           class=&quot;w&quot;&gt;&lt;div
-          class=&quot;hd2&quot;&gt;&lt;div&gt;&lt;p
-          class=&quot;eyebrow&quot;&gt;Eyebrow&lt;/p&gt;&lt;h2&gt;Dark section
-          title&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;Supporting line in light
+          class=&quot;hd2&quot;&gt;&lt;div&gt;&lt;h2&gt;&lt;span class=&quot;eyebrow&quot;&gt;Eyebrow&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;headline&quot;&gt;Dark section title&lt;/span&gt;&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;Supporting line in light
           blue.&lt;/p&gt;&lt;/div&gt; &lt;dl
           class=&quot;rules&quot;&gt;&lt;div&gt;&lt;dt&gt;Term&lt;/dt&gt;&lt;dd&gt;Definition
           text.&lt;/dd&gt;&lt;/div&gt;&lt;div&gt;&lt;dt&gt;Another
@@ -1410,7 +1411,11 @@
           class=&quot;pill&quot;&gt;Closed&lt;/p&gt;
         </div>
       </div>
-    </main>
+    <div class="doc-component" id="eyebrow-heading"><div class="meta"><span class="doc-tag">Pattern</span><h2>Eyebrow heading group</h2><p>The small label above a section title lives inside the heading, so a screen reader hears one heading: “Program Overview: Helping young people work, earn, and grow.” The <code>.sr-only</code> colon supplies the pause and is invisible. Visually nothing changes: <code>.eyebrow</code> is a block span with the same type as before, and the section-specific widths, margins, and colors it used to get as a <code>p</code> are kept in <code>style.css</code>. Use it for every eyebrow and title pair, including the hero <code>h1</code> and the CTA band. Keep eyebrows to a few words, and do not reuse a tab panel’s id on the heading.</p></div><div class="doc-frame"><div style="padding:40px 24px"><div class="hd2"><div><h2><span class="eyebrow">Program Overview</span><span class="sr-only">: </span><span class="headline">Helping young people work, earn, and grow</span></h2></div></div></div></div><div class="doc-code">&lt;h2&gt;
+  &lt;span class=&quot;eyebrow&quot;&gt;Program Overview&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;: &lt;/span&gt;
+  &lt;span class=&quot;headline&quot;&gt;Helping young people work, earn, and grow&lt;/span&gt;
+&lt;/h2&gt;</div></div>
+</main>
 
     <footer id="contact">
       <div class="w fmain">
