@@ -7,7 +7,7 @@
   --ink: #0b2f45;
   --chalk: #cad9ea;
   --mute: #273745;
-  --line: #e3eaef;
+  --line: #bac8d263;
   --aqua: #35e6fc;
   --aquaD: #0098c9;
   --teal: #05568d;
@@ -2175,6 +2175,9 @@ summary:hover {
 .dark .subheadline {
   color: var(--chalk);
 }
+.dark .pill {
+  background: transparent;
+}
 .contact .bcard a:not(.btn) {
   font-size: 0.92rem;
 }
@@ -2228,6 +2231,270 @@ summary:hover {
   .dd > button {
     padding: 8px 9px;
     font-size: 0.88rem;
+  }
+}
+
+/* ======================================================================
+   BASIC PAGE (content type 4)
+   Frame: .crumb > .hero > any mix of the components below, in any order.
+   Components: .rt (rich text) · .pq (pull quote) · .callout · .feat / .feat.flip
+               .path.cols2 + .bcard · .gal · .doclist · .cta
+   Section backgrounds authors can choose: default (white), .tint, .dark
+   ====================================================================== */
+.w.narrow {
+  max-width: 840px;
+}
+
+/* rich text: everything the editor can produce */
+section.rt {
+  padding: 56px 0;
+}
+.rich {
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+.rich > :first-child {
+  margin-top: 0;
+}
+.rich > :last-child {
+  margin-bottom: 0;
+}
+.rich p {
+  margin: 0 0 1.1em;
+}
+.rich h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  margin: 1.7em 0 0.6em;
+}
+.rich h3 {
+  font-size: 1.45rem;
+  margin: 1.6em 0 0.5em;
+}
+.rich h4 {
+  font: 600 1.12rem/1.3 Figtree, system-ui, sans-serif;
+  letter-spacing: 0;
+  color: var(--teal);
+  margin: 1.5em 0 0.4em;
+}
+.rich a:not(.btn) {
+  color: var(--teal);
+  text-decoration: underline;
+  text-decoration-color: var(--aqua);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.rich a:not(.btn):hover {
+  color: var(--aquaD);
+}
+.rich ul,
+.rich ol {
+  margin: 0 0 1.2em;
+  padding-left: 1.5em;
+}
+.rich li {
+  margin-bottom: 0.55em;
+  padding-left: 0.25em;
+}
+.rich li::marker {
+  color: var(--aquaD);
+  font-weight: 700;
+}
+.rich hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2em 0;
+}
+.rich .btn {
+  margin: 0.3em 0 1.2em;
+}
+.rich blockquote {
+  margin: 1.6em 0;
+  padding: 4px 0 4px 22px;
+  border-left: 4px solid var(--aqua);
+  font-size: 1.2rem;
+}
+.rich blockquote p {
+  margin: 0;
+}
+.rich figure {
+  margin: 2em 0;
+}
+.rich figure .ph {
+  border-radius: 18px;
+  aspect-ratio: 16/9;
+}
+.rich figcaption {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: var(--mute);
+}
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.6em 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.rich table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+.rich th,
+.rich td {
+  text-align: left;
+  vertical-align: top;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.rich th {
+  background: var(--panel);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.rich tr:last-child th,
+.rich tr:last-child td {
+  border-bottom: 0;
+}
+
+/* pull quote: large statement that breaks up long text */
+section.pq {
+  padding: 24px 0;
+}
+.pullquote {
+  margin: 0;
+  position: relative;
+  padding: 8px 0 8px 76px;
+}
+.pullquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: -14px;
+  font: 600 6.5rem/1 "Bricolage Grotesque", Figtree, sans-serif;
+  color: var(--aqua);
+}
+.pullquote blockquote {
+  margin: 0;
+}
+.pullquote p {
+  margin: 0;
+  font: 600 clamp(1.4rem, 2.4vw, 1.9rem) / 1.3 "Bricolage Grotesque", Figtree,
+    sans-serif;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.pullquote figcaption {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: var(--mute);
+}
+
+/* callout: one key fact + one action, full-width band */
+section.callout {
+  padding: 52px 0;
+}
+.callout .w {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.callout .date {
+  flex: none;
+  text-align: center;
+  padding: 16px 26px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  line-height: 1;
+}
+.callout .date b {
+  display: block;
+  margin: 6px 0;
+  font: 600 2.8rem/1 "Bricolage Grotesque", Figtree, sans-serif;
+}
+.callout .date span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.8rem;
+  color: var(--chalk);
+}
+.callout .txt {
+  flex: 1;
+  min-width: 0;
+}
+.callout h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+.callout p {
+  margin: 8px 0 0;
+  color: var(--chalk);
+}
+
+/* feature block, image on the left */
+.feat.flip .w {
+  grid-template-columns: 1.05fr 1fr;
+}
+.feat.flip .ph {
+  order: -1;
+}
+@media (max-width: 980px) {
+  .feat.flip .w {
+    grid-template-columns: 1fr;
+  }
+  .feat.flip .ph {
+    order: 0;
+  }
+}
+
+/* two-up card grid (the three-up one is .path.cols3) */
+.path.cols2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 640px) {
+  .path.cols2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* gallery captions-free grid sits in a normal section; reuses .gal + lightbox */
+
+/* link pills (social, related links) */
+.pill-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+}
+.pill-links a {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.pill-links a:hover {
+  border-color: var(--aqua);
+  color: var(--aquaD);
+}
+@media (max-width: 640px) {
+  .callout .w {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+  .pullquote {
+    padding-left: 0;
+    padding-top: 52px;
+  }
+  .pullquote::before {
+    top: -6px;
   }
 }
 
