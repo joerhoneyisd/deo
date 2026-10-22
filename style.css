@@ -5,6 +5,7 @@
   color-scheme: light;
   --surface: #fff;
   --ink: #0b2f45;
+  --chalk: #cad9ea;
   --mute: #273745;
   --line: #e3eaef;
   --aqua: #35e6fc;
@@ -67,6 +68,13 @@ h3 {
   font: 700 1rem Figtree;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  color: var(--teal);
+  margin: 0 0 10px;
+}
+.subheadline {
+  display: block;
+  font: 400 1.2rem Figtree;
+  letter-spacing: 0;
   color: var(--teal);
   margin: 0 0 10px;
 }
@@ -324,6 +332,11 @@ nav > a:hover,
   color: var(--aquaD);
   font-size: 1.36rem;
   margin: 20px 0 30px; /* was inherited from .hero p */
+}
+.hero .subheadline {
+  color: var(--aquaD);
+  font-size: 1.6rem;
+  margin: 10px 0 30px; /* was inherited from .hero p */
 }
 .qcard {
   width: 250px;
@@ -2056,7 +2069,7 @@ summary:hover {
 }
 .dark .hd2 > p,
 .dark .prose p {
-  color: #cad9ea;
+  color: var(--chalk);
 }
 .dark .note {
   background: rgba(255, 255, 255, 0.08);
@@ -2158,8 +2171,9 @@ summary:hover {
   border-radius: 14px;
   padding: 14px 22px;
 }
-.dark .eyebrow {
-  color: var(--aqua);
+.dark .eyebrow,
+.dark .subheadline {
+  color: var(--chalk);
 }
 .contact .bcard a:not(.btn) {
   font-size: 0.92rem;
@@ -2202,7 +2216,8 @@ summary:hover {
   max-width: 34ch;
   margin: 0 0 26px;
 }
-.stat-band .hd2 .eyebrow {
+.stat-band .hd2 .eyebrow,
+.stat-band .hd2 .subheadline {
   color: #cad9ea;
 }
 
